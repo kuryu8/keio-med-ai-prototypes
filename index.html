@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>keio-med-ai-prototypes</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f3ee;
+      --panel: rgba(255, 255, 255, 0.9);
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #0f4c81;
+      --accent-soft: #dbeafe;
+      --border: rgba(15, 76, 129, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(15, 76, 129, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.10), transparent 26%),
+        linear-gradient(180deg, #fbfaf8, var(--bg));
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(720px, 100%);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+      backdrop-filter: blur(10px);
+      padding: 32px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 18px 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    a.tile {
+      display: block;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(15, 76, 129, 0.14);
+      background: #fff;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    a.tile:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+      border-color: rgba(15, 76, 129, 0.28);
+    }
+
+    .tile-title {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .tile-path {
+      color: var(--muted);
+      font-size: 14px;
+      word-break: break-all;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">GitHub Pages</div>
+    <h1>keio-med-ai-prototypes</h1>
+    <p>このリポジトリの公開入口です。下のリンクから各ページに直接アクセスできます。</p>
+
+    <div class="grid">
+      <a class="tile" href="ai-referral-editor.html">
+        <span class="tile-title">診療情報提供書 自動生成システム</span>
+        <span class="tile-path">/ai-referral-editor.html</span>
+      </a>
+
+      <a class="tile" href="ai-screening.html">
+        <span class="tile-title">AIスクリーニング・ダッシュボード</span>
+        <span class="tile-path">/ai-screening.html</span>
+      </a>
+    </div>
+
+    <p class="note">GitHub Pages の設定は「branch: main」「folder: /(root)」にしてください。</p>
+  </main>
+</body>
+</html>
